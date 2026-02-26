@@ -1,0 +1,7 @@
+project_id = "skgieauxizmwihjvdrat"
+
+[functions.monday-lead]
+verify_jwt = false
+
+[functions.send-lead-email]
+verify_jwt = false
