@@ -1,6 +1,6 @@
-import puppeteer from "puppeteer";
+import puppeteer from "puppeteer-core";
 import { createServer } from "http";
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "fs";
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from "fs";
 import { join, dirname } from "path";
 import { fileURLToPath } from "url";
 
@@ -66,14 +66,72 @@ function startServer(port) {
   });
 }
 
+// Recursively find a file by name, returning the most recently modified match
+function findBinary(dir, name) {
+  let results = [];
+  try {
+    for (const entry of readdirSync(dir, { withFileTypes: true })) {
+      const full = join(dir, entry.name);
+      if (entry.isDirectory()) {
+        results = results.concat(findBinary(full, name));
+      } else if (entry.name === name) {
+        results.push(full);
+      }
+    }
+  } catch {}
+  return results;
+}
+
+function findExecutablePath() {
+  const caches = [
+    "/vercel/.cache/puppeteer",
+    join(process.env.HOME || "/root", ".cache", "puppeteer"),
+  ];
+
+  // Prefer chrome-headless-shell (works without system libs)
+  for (const cacheDir of caches) {
+    const shellDir = join(cacheDir, "chrome-headless-shell");
+    if (!existsSync(shellDir)) continue;
+    const bins = findBinary(shellDir, "chrome-headless-shell");
+    if (bins.length > 0) {
+      // Pick the last one (highest version, sorted alphabetically)
+      const picked = bins.sort().pop();
+      console.log(`Found chrome-headless-shell: ${picked}`);
+      return picked;
+    }
+  }
+
+  // Fallback: full chrome (local dev)
+  for (const cacheDir of caches) {
+    const chromeDir = join(cacheDir, "chrome");
+    if (!existsSync(chromeDir)) continue;
+    const bins = findBinary(chromeDir, "chrome");
+    if (bins.length > 0) {
+      const picked = bins.sort().pop();
+      console.log(`Found chrome: ${picked}`);
+      return picked;
+    }
+  }
+
+  return null;
+}
+
 async function prerender() {
   console.log(`Prerendering ${routes.length} routes...`);
 
   const PORT = 9222;
   const server = await startServer(PORT);
 
+  const executablePath = findExecutablePath();
+  if (!executablePath) {
+    console.error("No Chrome binary found. Run: npx puppeteer browsers install chrome-headless-shell");
+    server.close();
+    process.exit(1);
+  }
+
   const browser = await puppeteer.launch({
     headless: true,
+    executablePath,
     args: [
       "--no-sandbox",
       "--disable-setuid-sandbox",
