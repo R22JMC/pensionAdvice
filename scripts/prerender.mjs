@@ -83,8 +83,10 @@ function findBinary(dir, name) {
 }
 
 function findExecutablePath() {
+  const projectRoot = join(__dirname, "..");
   const caches = [
     "/vercel/.cache/puppeteer",
+    projectRoot,                                          // Vercel installs here
     join(process.env.HOME || "/root", ".cache", "puppeteer"),
   ];
 
