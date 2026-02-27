@@ -9,6 +9,27 @@ import CalculatorLeadForm from "./CalculatorLeadForm";
 import { pensionReviewConfig as config, sharedConstants } from "@/data/calculatorConfig";
 import logo from "@/assets/logo.png";
 
+const InputWithTooltip = ({ label, tooltip, children }: { label: string; tooltip?: string; children: React.ReactNode }) => (
+  <div className="space-y-1">
+    <div className="flex items-center gap-1.5">
+      <Label className="text-sm font-medium text-foreground">{label}</Label>
+      {tooltip && (
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Info className="w-3.5 h-3.5 text-muted-foreground cursor-help" />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p className="text-xs max-w-xs">{tooltip}</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      )}
+    </div>
+    {children}
+  </div>
+);
+
 const PensionReviewCalculator = () => {
   const [currentValue, setCurrentValue] = useState("");
   const [currentAge, setCurrentAge] = useState("");
@@ -86,27 +107,6 @@ const PensionReviewCalculator = () => {
     setShowResults(false);
     setResults(null);
   };
-
-  const InputWithTooltip = ({ label, tooltip, children }: { label: string; tooltip?: string; children: React.ReactNode }) => (
-    <div className="space-y-1">
-      <div className="flex items-center gap-1.5">
-        <Label className="text-sm font-medium text-foreground">{label}</Label>
-        {tooltip && (
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Info className="w-3.5 h-3.5 text-muted-foreground cursor-help" />
-              </TooltipTrigger>
-              <TooltipContent>
-                <p className="text-xs max-w-xs">{tooltip}</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        )}
-      </div>
-      {children}
-    </div>
-  );
 
   return (
     <div className="bg-card rounded-2xl shadow-lg border border-border overflow-hidden">

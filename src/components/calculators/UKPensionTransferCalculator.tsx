@@ -9,6 +9,27 @@ import CalculatorLeadForm from "./CalculatorLeadForm";
 import { ukPensionTransferConfig as config, sharedConstants } from "@/data/calculatorConfig";
 import logo from "@/assets/logo.png";
 
+const InputWithTooltip = ({ label, tooltip, children }: { label: string; tooltip?: string; children: React.ReactNode }) => (
+  <div className="space-y-1">
+    <div className="flex items-center gap-1.5">
+      <Label className="text-sm font-medium text-foreground">{label}</Label>
+      {tooltip && (
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Info className="w-3.5 h-3.5 text-muted-foreground cursor-help" />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p className="text-xs max-w-xs">{tooltip}</p>
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      )}
+    </div>
+    {children}
+  </div>
+);
+
 const UKPensionTransferCalculator = () => {
   const [pensionValueGBP, setPensionValueGBP] = useState("");
   const [currentAge, setCurrentAge] = useState("");
@@ -94,27 +115,6 @@ const UKPensionTransferCalculator = () => {
     setShowResults(false);
     setResults(null);
   };
-
-  const InputWithTooltip = ({ label, tooltip, children }: { label: string; tooltip?: string; children: React.ReactNode }) => (
-    <div className="space-y-1">
-      <div className="flex items-center gap-1.5">
-        <Label className="text-sm font-medium text-foreground">{label}</Label>
-        {tooltip && (
-          <TooltipProvider>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Info className="w-3.5 h-3.5 text-muted-foreground cursor-help" />
-              </TooltipTrigger>
-              <TooltipContent>
-                <p className="text-xs max-w-xs">{tooltip}</p>
-              </TooltipContent>
-            </Tooltip>
-          </TooltipProvider>
-        )}
-      </div>
-      {children}
-    </div>
-  );
 
   // Generate year options
   const yearOptions = Array.from({ length: 40 }, (_, i) => {
