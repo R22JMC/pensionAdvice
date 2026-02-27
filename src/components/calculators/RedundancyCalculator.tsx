@@ -152,7 +152,8 @@ const RedundancyCalculator = () => {
                   <span className="text-sm text-muted-foreground">€</span>
                   <Input
                     type="text"
-                    value={pensionValue.toLocaleString('en-IE')}
+                    inputMode="numeric"
+                    value={pensionValue ? pensionValue.toString() : ''}
                     onChange={(e) => {
                       const raw = e.target.value.replace(/[^0-9]/g, '');
                       setPensionValue(Number(raw) || 0);

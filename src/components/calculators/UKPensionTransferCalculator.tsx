@@ -168,7 +168,7 @@ const UKPensionTransferCalculator = () => {
                     type="text"
                     inputMode="numeric"
                     placeholder={config.inputs.pensionValueGBP.placeholder}
-                    value={pensionValueGBP ? Number(pensionValueGBP).toLocaleString('en-IE') : ''}
+                    value={pensionValueGBP}
                     onChange={(e) => setPensionValueGBP(e.target.value.replace(/[^0-9]/g, ''))}
                     className="pl-7"
                   />

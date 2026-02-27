@@ -129,7 +129,8 @@ const PensionTransferCalculator = () => {
                   <span className="text-sm text-muted-foreground">€</span>
                   <Input
                     type="text"
-                    value={totalValue.toLocaleString('en-IE')}
+                    inputMode="numeric"
+                    value={totalValue ? totalValue.toString() : ''}
                     onChange={(e) => {
                       const raw = e.target.value.replace(/[^0-9]/g, '');
                       setTotalValue(Number(raw) || 0);

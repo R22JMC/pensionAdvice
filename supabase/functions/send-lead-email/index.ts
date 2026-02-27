@@ -26,7 +26,7 @@ serve(async (req) => {
       throw new Error("RESEND_API_KEY is not configured");
     }
 
-    const SENDER_EMAIL = Deno.env.get("SENDER_EMAIL") || "hello@pension-advice.ie";
+    const SENDER_EMAIL = Deno.env.get("SENDER_EMAIL") || "hello@pensionadvice.ie";
 
     const { name, email, phone, formType, pageSource, formData }: EmailPayload = await req.json();
 
@@ -42,7 +42,7 @@ serve(async (req) => {
 <p style="margin:0 0 16px;">To ensure we answer your enquiry promptly, please let us know if there is a more suitable contact number for you.</p>`
       : `<p style="margin:0 0 16px;">To ensure we answer your enquiry promptly, please provide us with the best contact number to reach you.</p>`;
 
-    const logoUrl = "https://eozmvfmexmdvsbbxmgkj.supabase.co/storage/v1/object/public/email-assets/logo.png";
+    const logoUrl = "https://eozmvfmexmdvsbbxmgkj.supabase.co/storage/v1/object/public/email-assets/logo-white.png";
 
     const htmlBody = `
 <!DOCTYPE html>

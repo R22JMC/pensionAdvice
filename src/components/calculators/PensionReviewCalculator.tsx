@@ -134,7 +134,7 @@ const PensionReviewCalculator = () => {
                     type="text"
                     inputMode="numeric"
                     placeholder={config.inputs.currentValue.placeholder}
-                    value={currentValue ? Number(currentValue).toLocaleString('en-IE') : ''}
+                    value={currentValue}
                     onChange={(e) => setCurrentValue(e.target.value.replace(/[^0-9]/g, ''))}
                     className="pl-7"
                   />
@@ -181,7 +181,7 @@ const PensionReviewCalculator = () => {
                     type="text"
                     inputMode="numeric"
                     placeholder={config.inputs.monthlyContribution.placeholder}
-                    value={monthlyContribution ? Number(monthlyContribution).toLocaleString('en-IE') : ''}
+                    value={monthlyContribution}
                     onChange={(e) => setMonthlyContribution(e.target.value.replace(/[^0-9]/g, ''))}
                     className="pl-7"
                   />

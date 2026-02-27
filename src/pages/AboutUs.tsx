@@ -112,7 +112,7 @@ const AboutUs = () => {
           <div className="grid grid-cols-3 gap-3 md:gap-6 max-w-2xl mx-auto">
             {[
               { value: "50+", label: "Years Experience", bg: "bg-primary/10", text: "text-primary", border: "border-primary/20" },
-              { value: "€100M+", label: "Assets Under Management", bg: "bg-trust-green/10", text: "text-trust-green", border: "border-trust-green/20" },
+              { value: "€100M+", label: "Under Management", bg: "bg-trust-green/10", text: "text-trust-green", border: "border-trust-green/20" },
               { value: "1000+", label: "Clients Helped", bg: "bg-accent/10", text: "text-accent", border: "border-accent/20" },
             ].map((stat, index) => (
               <div
