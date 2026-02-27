@@ -31,12 +31,12 @@ const Header = () => {
         {/* Mobile Header Bar */}
         <div className="flex lg:hidden items-center justify-between h-14 px-4">
           {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img src={logo} alt="Pension Advice" className="h-8 w-auto" />
+          <Link to="/" className="flex items-center shrink-0">
+            <img src={logo} alt="Pension Advice" className="h-6 w-auto" />
           </Link>
 
           {/* Contact Us Button & Hamburger */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 shrink-0">
             <Link to="/contact">
               <Button size="sm" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-xs px-3">
                 Contact Us

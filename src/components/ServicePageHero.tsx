@@ -243,7 +243,7 @@ const ServicePageHero = ({ title, subtitle, highlights = ["Expert Guidance", "In
         }} />
       </div>
 
-      <div className="container-custom relative z-10 py-12 md:py-20 px-4">
+      <div className="container-custom relative z-10 py-12 md:py-20 px-4 overflow-hidden">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <div className="text-primary-foreground order-2 lg:order-1">
@@ -278,15 +278,15 @@ const ServicePageHero = ({ title, subtitle, highlights = ["Expert Guidance", "In
           </div>
 
           {/* Right - Form Card */}
-          <div id="service-form" className="order-1 lg:order-2 scroll-mt-8">
+          <div id="service-form" className="order-1 lg:order-2 scroll-mt-8 min-w-0">
             <div className="relative">
               {/* Glow effect behind card */}
               <div className="absolute -inset-4 bg-primary/30 rounded-3xl blur-2xl" />
-              
+
               <div className="relative bg-card rounded-2xl shadow-2xl overflow-hidden border border-border">
                 {formStep === 1 ? (
                   /* Step 1: Main form */
-                  <div className="p-6 md:p-8">
+                  <div className="p-4 sm:p-6 md:p-8">
                     <div className="flex flex-col items-center mb-4">
                       <img src={logo} alt="Pension Advice" className="h-12 w-auto mb-2" />
                       <h3 className="text-2xl font-bold text-primary">Start your Pension Journey</h3>
@@ -604,17 +604,17 @@ const ServicePageHero = ({ title, subtitle, highlights = ["Expert Guidance", "In
                         </label>
                       </div>
 
-                      <div className="flex items-center gap-4">
+                      <div className="flex items-center gap-3">
                         <Button
                           type="submit"
                           disabled={!privacyAccepted}
-                          className="h-14 px-8 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg shadow-lg shadow-accent/25 group disabled:cursor-not-allowed disabled:opacity-100 animate-[pulse-scale_2s_ease-in-out_infinite]"
+                          className="h-12 sm:h-14 px-6 sm:px-8 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-base sm:text-lg shadow-lg shadow-accent/25 group disabled:cursor-not-allowed disabled:opacity-100 animate-[pulse-scale_2s_ease-in-out_infinite]"
                         >
                           Get Help
                           <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                         </Button>
                         <div className="flex items-center gap-2 text-trust-green">
-                          <ShieldCheck className="w-8 h-8" />
+                          <ShieldCheck className="w-7 h-7 sm:w-8 sm:h-8 shrink-0" />
                           <div className="text-xs leading-tight">
                             <span className="font-bold">SECURE</span>
                             <br />
