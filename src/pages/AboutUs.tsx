@@ -109,15 +109,15 @@ const AboutUs = () => {
       {/* Stats Row */}
       <section className="py-8 bg-gradient-to-b from-background to-accent/5">
         <div className="container-custom">
-          <div className="grid grid-cols-3 gap-3 md:gap-4 max-w-lg mx-auto">
+          <div className="grid grid-cols-3 gap-3 md:gap-6 max-w-2xl mx-auto">
             {[
               { value: "50+", label: "Years Experience", bg: "bg-primary/10", text: "text-primary", border: "border-primary/20" },
               { value: "€100M+", label: "Assets Under Management", bg: "bg-trust-green/10", text: "text-trust-green", border: "border-trust-green/20" },
               { value: "1000+", label: "Clients Helped", bg: "bg-accent/10", text: "text-accent", border: "border-accent/20" },
             ].map((stat, index) => (
-              <div 
-                key={index} 
-                className={`flex flex-col items-center px-3 py-3 md:px-6 md:py-4 rounded-xl ${stat.bg} border ${stat.border}`}
+              <div
+                key={index}
+                className={`flex flex-col items-center px-4 py-4 md:px-8 md:py-5 rounded-xl ${stat.bg} border ${stat.border}`}
               >
                 <p className={`text-lg sm:text-2xl md:text-3xl font-bold ${stat.text}`}>{stat.value}</p>
                 <p className="text-[10px] sm:text-xs text-muted-foreground whitespace-nowrap">{stat.label}</p>

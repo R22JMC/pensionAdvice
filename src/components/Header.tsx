@@ -29,7 +29,7 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-sm border-b border-border">
       <div className="container-custom">
         {/* Mobile Header Bar */}
-        <div className="flex lg:hidden items-center justify-between h-14 px-4">
+        <div className="flex xl:hidden items-center justify-between h-14 px-4">
           {/* Logo */}
           <Link to="/" className="flex items-center shrink-0">
             <img src={logo} alt="Pension Advice" className="h-6 w-auto" />
@@ -57,7 +57,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Header Bar */}
-        <div className="hidden lg:flex items-center justify-between h-20 px-4">
+        <div className="hidden xl:flex items-center justify-between h-20 px-4">
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img src={logo} alt="Pension Advice" className="h-12 w-auto" />
@@ -134,7 +134,7 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <nav className="lg:hidden py-4 px-4 border-t border-border animate-fade-in">
+          <nav className="xl:hidden py-4 px-4 border-t border-border animate-fade-in">
             <div className="flex flex-col gap-2">
               <Link
                 to="/"
@@ -202,7 +202,7 @@ const Header = () => {
       </div>
     </header>
     {/* Spacer for fixed header */}
-    <div className="h-14 lg:h-20" />
+    <div className="h-14 xl:h-20" />
     </>
   );
 };
