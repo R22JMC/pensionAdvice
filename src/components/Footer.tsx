@@ -1,7 +1,11 @@
+import { useState } from "react";
 import { Phone, Mail, Clock, MapPin, Facebook, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
+import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
+import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 const Footer = () => {
+  const [remunerationOpen, setRemunerationOpen] = useState(false);
   const learnMore = [{
     name: "Resources",
     href: "/resources"
@@ -108,6 +112,14 @@ const Footer = () => {
                     {link.name}
                   </Link>
                 </li>)}
+              <li>
+                <button
+                  onClick={() => setRemunerationOpen(true)}
+                  className="text-sm text-muted-foreground hover:text-primary transition-colors text-left"
+                >
+                  Our Remuneration
+                </button>
+              </li>
             </ul>
           </div>
 
@@ -165,6 +177,18 @@ const Footer = () => {
           </div>
         </div>
       </div>
+      <Dialog open={remunerationOpen} onOpenChange={setRemunerationOpen}>
+        <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto p-2 sm:p-4">
+          <VisuallyHidden>
+            <DialogTitle>Our Remuneration</DialogTitle>
+          </VisuallyHidden>
+          <img
+            src="/remuneration.jpg"
+            alt="Our Remuneration - Details of commission and fee arrangements"
+            className="w-full h-auto"
+          />
+        </DialogContent>
+      </Dialog>
     </footer>;
 };
 export default Footer;
