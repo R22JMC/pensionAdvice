@@ -117,7 +117,7 @@ const Footer = () => {
                   onClick={() => setRemunerationOpen(true)}
                   className="text-sm text-muted-foreground hover:text-primary transition-colors text-left"
                 >
-                  Our Remuneration
+                  Charges
                 </button>
               </li>
             </ul>
