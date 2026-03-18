@@ -11,6 +11,7 @@ import ServiceFAQ from "@/components/ServiceFAQ";
 import AdvisorContactCard from "@/components/AdvisorContactCard";
 import CorePriorities from "@/components/CorePriorities";
 import ServiceVideos from "@/components/ServiceVideos";
+import ServiceReviews from "@/components/ServiceReviews";
 import { Phone, FileSearch, FileText, CheckCircle } from "lucide-react";
 import EarlyRetirementCalculator from "@/components/calculators/EarlyRetirementCalculator";
 
@@ -205,6 +206,8 @@ const EarlyRetirement = () => {
         title="Frequently Asked Questions About Getting Your Pension Early"
         faqs={faqs}
       />
+
+      <ServiceReviews category="earlyRetirement" />
 
       <AdvisorContactCard />
 

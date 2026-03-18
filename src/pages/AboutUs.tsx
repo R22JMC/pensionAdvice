@@ -169,7 +169,12 @@ const AboutUs = () => {
                   className="rounded-2xl shadow-xl w-full h-64 md:h-72 object-cover"
                 />
                 {/* Floating Card */}
-                <div className="absolute -bottom-4 left-0 sm:-left-4 bg-card p-3 rounded-lg shadow-lg border border-border">
+                <a
+                  href="https://registers.centralbank.ie/FirmRegisterDataPage.aspx?firmReferenceNumber=C143985&register=7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute -bottom-4 left-0 sm:-left-4 bg-card p-3 rounded-lg shadow-lg border border-border hover:shadow-xl hover:border-accent/30 transition-all"
+                >
                   <div className="flex items-center gap-2">
                     <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
                       <Award className="w-5 h-5 text-accent" />
@@ -179,7 +184,7 @@ const AboutUs = () => {
                       <p className="text-xs text-muted-foreground">Regulated</p>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>

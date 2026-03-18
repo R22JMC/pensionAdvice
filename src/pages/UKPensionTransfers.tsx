@@ -11,6 +11,7 @@ import ServiceFAQ from "@/components/ServiceFAQ";
 import AdvisorContactCard from "@/components/AdvisorContactCard";
 import CorePriorities from "@/components/CorePriorities";
 import ServiceVideos from "@/components/ServiceVideos";
+import ServiceReviews from "@/components/ServiceReviews";
 import { Phone, FileSearch, FileText, CheckCircle } from "lucide-react";
 import UKPensionTransferCalculator from "@/components/calculators/UKPensionTransferCalculator";
 
@@ -43,7 +44,6 @@ const UKPensionTransfers = () => {
       bullets: [
         "You've been a member of a personal or workplace UK pension scheme in the past",
         "You now live in Ireland full-time",
-        "You haven't been a UK tax resident in the past ten UK tax years",
         "You want your pension held in your name, managed locally",
         "Your current UK provider allows overseas transfers",
       ],
@@ -207,6 +207,8 @@ const UKPensionTransfers = () => {
         title="Frequently Asked Questions About UK Pension Transfers"
         faqs={faqs}
       />
+
+      <ServiceReviews category="ukTransfer" />
 
       <AdvisorContactCard />
 

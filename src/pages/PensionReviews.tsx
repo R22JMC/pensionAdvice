@@ -11,6 +11,7 @@ import ServiceFAQ from "@/components/ServiceFAQ";
 import AdvisorContactCard from "@/components/AdvisorContactCard";
 import CorePriorities from "@/components/CorePriorities";
 import ServiceVideos from "@/components/ServiceVideos";
+import ServiceReviews from "@/components/ServiceReviews";
 import PensionReviewCalculator from "@/components/calculators/PensionReviewCalculator";
 import { Phone, FileSearch, FileText, CheckCircle } from "lucide-react";
 
@@ -188,6 +189,8 @@ const PensionReviews = () => {
         title="Frequently Asked Questions About Pension Reviews"
         faqs={faqs}
       />
+
+      <ServiceReviews category="reviews" />
 
       <AdvisorContactCard />
 

@@ -10,6 +10,7 @@ import ServiceCTA from "@/components/ServiceCTA";
 import ServiceFAQ from "@/components/ServiceFAQ";
 import AdvisorContactCard from "@/components/AdvisorContactCard";
 import CorePriorities from "@/components/CorePriorities";
+import ServiceReviews from "@/components/ServiceReviews";
 import { Phone, FileSearch, FileText, CheckCircle } from "lucide-react";
 import RedundancyCalculator from "@/components/calculators/RedundancyCalculator";
 
@@ -180,6 +181,8 @@ const RedundancyPensions = () => {
         title="Frequently Asked Questions About Redundancy and Pensions"
         faqs={faqs}
       />
+
+      <ServiceReviews category="redundancy" />
 
       <AdvisorContactCard />
 

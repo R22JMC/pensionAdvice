@@ -161,7 +161,7 @@ serve(async (req) => {
       },
       body: JSON.stringify({
         from: `Pension Advice Leads <${SENDER_EMAIL}>`,
-        to: ["hello@pension-advice.ie"],
+        to: ["leads@pension-advice.ie"],
         subject: `New Lead: ${name} – ${formType || 'Enquiry'}`,
         html: teamHtml,
       }),

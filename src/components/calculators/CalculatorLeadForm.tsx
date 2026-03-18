@@ -94,6 +94,7 @@ const CalculatorLeadForm = ({ calculatorType, resultSummary, onSubmit, hideHeade
         additionalInfo: formData.additionalInfo,
         bestTimeToCall: formData.bestTimeToCall,
       },
+      skipEmail: true,
     });
 
     setIsSubmitting(false);

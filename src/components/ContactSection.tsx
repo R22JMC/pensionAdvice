@@ -76,6 +76,7 @@ const ContactSection = () => {
         additionalInfo: formData.additionalInfo,
         bestTimeToCall: formData.bestTimeToCall,
       },
+      skipEmail: true,
     });
 
     console.log("Form submitted:", formData);
@@ -123,7 +124,7 @@ const ContactSection = () => {
               <form onSubmit={handleStep1Submit} className="p-6 md:p-8 space-y-5">
                 <div className="flex flex-col items-center mb-2">
                   <img src={logo} alt="Pension Advice" className="h-12 w-auto mb-2" />
-                  <h3 className="text-2xl font-bold text-primary">Start your Pension Journey</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-primary whitespace-nowrap">Start your Pension Journey</h3>
                 </div>
                 <div>
                   <Label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">Name</Label>

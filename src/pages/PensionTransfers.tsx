@@ -11,6 +11,7 @@ import ServiceCTA from "@/components/ServiceCTA";
 import ServiceFAQ from "@/components/ServiceFAQ";
 import AdvisorContactCard from "@/components/AdvisorContactCard";
 import CorePriorities from "@/components/CorePriorities";
+import ServiceReviews from "@/components/ServiceReviews";
 import PensionTransferCalculator from "@/components/calculators/PensionTransferCalculator";
 
 const whoShouldConsiderFeatures = [
@@ -236,6 +237,8 @@ const PensionTransfers = () => {
         title="Frequently Asked Questions about Pension Transfers in Ireland"
         faqs={faqs}
       />
+
+      <ServiceReviews category="transfers" />
 
       <AdvisorContactCard />
 
