@@ -139,7 +139,7 @@ const EarlyRetirement = () => {
       <Helmet>
         <title>Unlock Your Pension Early in Ireland | Expert Early Retirement Advice</title>
         <meta name="description" content="Over 50? You may be able to unlock your pension early. Get clear, expert advice on eligibility, tax-free cash, and flexible retirement options." />
-        <link rel="canonical" href="https://www.pensionadvice.ie/categories/unlock-your-pension-early" />
+        <link rel="canonical" href="https://www.pensionadvice.ie/services/early-retirement" />
       </Helmet>
       
       <Header />
