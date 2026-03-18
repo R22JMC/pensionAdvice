@@ -118,7 +118,7 @@ const PensionReviews = () => {
       <Helmet>
         <title>Pension Review Ireland | Check Your Pension's Value, Fees & Options</title>
         <meta name="description" content="Not sure how your pension is performing? Our free pension review helps you understand charges, risks, and whether to stay put, switch, or consolidate. No jargon, no pressure." />
-        <link rel="canonical" href="https://www.pensionadvice.ie/categories/review-your-pension" />
+        <link rel="canonical" href="https://www.pensionadvice.ie/services/pension-reviews" />
       </Helmet>
       
       <Header />
