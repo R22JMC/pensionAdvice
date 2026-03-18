@@ -78,6 +78,16 @@ const Footer = () => {
                   </Link>
                 </li>)}
             </ul>
+             <div class="block md:hidden mt-4">
+              <h4 className="font-semibold text-foreground mb-4">About</h4>
+              <ul className="space-y-2">
+                {about.map(link => <li key={link.name}>
+                    <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors no-underline">
+                      {link.name}
+                    </Link>
+                  </li>)}
+              </ul>
+            </div>
           </div>
 
           {/* Calculators */}
@@ -89,10 +99,10 @@ const Footer = () => {
                     {link.name}
                   </Link>
                 </li>)}
-            </ul>
+            </ul>            
           </div>
 
-          <div>
+          <div class="hidden md:block">
             <h4 className="font-semibold text-foreground mb-4">About</h4>
             <ul className="space-y-2">
               {about.map(link => <li key={link.name}>
