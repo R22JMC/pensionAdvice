@@ -82,7 +82,7 @@ const Footer = () => {
 
           {/* Calculators */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Calculators</h4>
+            <h4 className="font-semibold text-foreground mb-4">Calculators.</h4>
             <ul className="space-y-2">
               {calculators.map(link => <li key={link.name}>
                   <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors no-underline">
