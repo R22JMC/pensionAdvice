@@ -137,7 +137,7 @@ const UKPensionTransfers = () => {
       <Helmet>
         <title>Transfer Your UK Pension to Ireland | Expert QROPS Guidance</title>
         <meta name="description" content="Thinking of transferring your UK pension? We simplify QROPS transfers, manage paperwork, and help avoid UK tax pitfalls." />
-        <link rel="canonical" href="https://www.pensionadvice.ie/categories/transferring-your-uk-pension-to-ireland" />
+        <link rel="canonical" href="https://www.pensionadvice.ie/services/uk-pension-transfers" />
       </Helmet>
       
       <Header />
