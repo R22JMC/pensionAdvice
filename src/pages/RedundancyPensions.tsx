@@ -117,7 +117,7 @@ const RedundancyPensions = () => {
       <Helmet>
         <title>Redundancy and Pensions in Ireland | Your Rights & Options</title>
         <meta name="description" content="Made redundant in Ireland? Understand what happens to your pension, how to protect your benefits, and whether a Buy Out Bond or transfer makes sense. Expert advice with no obligation." />
-        <link rel="canonical" href="https://www.pensionadvice.ie/categories/pensions-and-redundancy" />
+        <link rel="canonical" href="https://www.pensionadvice.ie/services/redundancy-pensions" />
       </Helmet>
       
       <Header />
