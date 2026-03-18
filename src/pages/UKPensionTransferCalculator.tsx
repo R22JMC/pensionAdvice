@@ -7,6 +7,9 @@ const UKPensionTransferCalculatorPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
+        <link rel="canonical" href="https://www.pensionadvice.ie/uk-pension-transfer-calculator" />
+      </Helmet>
+      <Helmet>
         <title>UK Pension Transfer Calculator | QROPS Estimator</title>
         <meta name="description" content="Use our free UK pension transfer calculator to estimate the value of transferring your UK pension to Ireland." />
       </Helmet>

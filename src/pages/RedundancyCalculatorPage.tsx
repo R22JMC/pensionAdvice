@@ -7,6 +7,9 @@ const RedundancyCalculatorPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
+        <link rel="canonical" href="https://www.pensionadvice.ie/redundancy-calculator" />
+      </Helmet>
+      <Helmet>
         <title>Redundancy Calculator | Understand Your Pension Options</title>
         <meta name="description" content="Use our free redundancy calculator to understand your pension options after redundancy." />
       </Helmet>

@@ -7,6 +7,9 @@ const PensionTransferCalculatorPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
+        <link rel="canonical" href="https://www.pensionadvice.ie/pension-transfer-calculator" />
+      </Helmet>
+      <Helmet>
         <title>Pension Transfer Calculator | Consolidation Savings Estimator</title>
         <meta name="description" content="Use our free pension transfer calculator to see how much you could save by consolidating your pensions." />
       </Helmet>

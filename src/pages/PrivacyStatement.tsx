@@ -6,6 +6,9 @@ const PrivacyStatement = () => {
   return (
     <>
       <Helmet>
+        <link rel="canonical" href="https://www.pensionadvice.ie/privacy-statement" />
+      </Helmet>
+      <Helmet>
         <title>Privacy Statement | Pension Advice Ireland</title>
         <meta name="description" content="Privacy Statement for Pension Advice Ireland. Learn how we collect, use, and protect your personal data." />
       </Helmet>

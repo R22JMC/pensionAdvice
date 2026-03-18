@@ -108,7 +108,9 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+
       <Helmet>
+        <link rel="canonical" href="https://www.pensionadvice.ie/resources" />
         <meta name="description" content="Free pension guides, videos and calculators from Ireland's leading pension advisers. Explore your options for pension transfers, reviews, early retirement and more." />
       </Helmet>
       <Header />

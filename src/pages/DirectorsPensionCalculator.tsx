@@ -7,6 +7,9 @@ const DirectorsPensionCalculatorPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
+        <link rel="canonical" href="https://www.pensionadvice.ie/directors-pension-calculator" />
+      </Helmet>
+      <Helmet>
         <title>Directors Pension Calculator | Max Funding Quote</title>
         <meta name="description" content="Get a free max funding quote for your director's pension. Find out how much you can contribute tax-efficiently." />
       </Helmet>

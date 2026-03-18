@@ -7,6 +7,9 @@ const PensionReviewCalculatorPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
+        <link rel="canonical" href="https://www.pensionadvice.ie/pension-review-calculator" />
+      </Helmet>
+      <Helmet>
         <title>Pension Review Calculator | Free Pension Check Tool</title>
         <meta name="description" content="Use our free pension review calculator to check the projected value of your pension. Get instant estimates and expert advice." />
       </Helmet>

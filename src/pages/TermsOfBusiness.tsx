@@ -6,6 +6,9 @@ const TermsOfBusiness = () => {
   return (
     <>
       <Helmet>
+        <link rel="canonical" href="https://www.pensionadvice.ie/terms-of-business" />
+      </Helmet>
+      <Helmet>
         <title>Terms of Business | Pension Advice Ireland</title>
         <meta name="description" content="Terms of Business for Gen Z Financial Solutions Limited trading as Pension Advice. Read our regulatory status, services, and client responsibilities." />
       </Helmet>

@@ -175,6 +175,9 @@ const ContactUs = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
+        <link rel="canonical" href="https://www.pensionadvice.ie/contact" />
+      </Helmet>
+      <Helmet>
         <title>Contact Us | Ireland's Leading Authority on Pension Advice</title>
         <meta name="description" content="Contact us today to speak with one of our highly qualified pension experts. Pension Advice is Ireland's leading authority on Pension Advice. We advise on all aspects of Pensions and Retirement Planning." />
       </Helmet>

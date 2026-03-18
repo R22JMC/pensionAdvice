@@ -7,6 +7,9 @@ const EarlyRetirementCalculatorPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
+        <link rel="canonical" href="https://www.pensionadvice.ie/early-retirement-calculator" />
+      </Helmet>
+      <Helmet>
         <title>Early Retirement Calculator | Plan Your Early Exit</title>
         <meta name="description" content="Use our free early retirement calculator to estimate your pension lump sum and retirement income options." />
       </Helmet>

@@ -53,6 +53,9 @@ const AboutUs = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
+        <link rel="canonical" href="https://www.pensionadvice.ie/about" />
+      </Helmet>
+      <Helmet>
         <title>About Us | Ireland's Leading Authority on Pension Advice</title>
         <meta name="description" content="About Us - Our aim at Pension Advice is to put our client's needs and expectations first in everything we do. We focus on the delivery of truly independent expert advice, delivered to you by a team of highly qualified & specialised Consultants with a combined 25 years' experience." />
       </Helmet>

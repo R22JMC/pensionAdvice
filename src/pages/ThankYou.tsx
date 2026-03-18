@@ -8,7 +8,9 @@ import { Button } from "@/components/ui/button";
 const ThankYou = () => {
   return (
     <div className="min-h-screen bg-background flex flex-col">
+
       <Helmet>
+        <link rel="canonical" href="https://www.pensionadvice.ie/thank-you" />
         <meta name="robots" content="noindex, nofollow" />
       </Helmet>
       <Header />
