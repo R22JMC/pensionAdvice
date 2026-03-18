@@ -141,7 +141,7 @@ const PensionTransfers = () => {
       <Helmet>
         <title>Transfer or Consolidate Your Pensions | Expert Advice to Simplify & Save</title>
         <meta name="description" content="Thinking of consolidating or transferring your pensions? We handle the paperwork, explain the risks, and make sure you don't lose valuable benefits." />
-        <link rel="canonical" href="https://www.pensionadvice.ie/categories/pension-transfers-and-consolidation" />
+        <link rel="canonical" href="https://www.pensionadvice.ie/services/pension-transfers" />
       </Helmet>
       
       <Header />
