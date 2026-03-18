@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
@@ -107,6 +108,9 @@ const Resources = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <Helmet>
+        <meta name="description" content="Free pension guides, videos and calculators from Ireland's leading pension advisers. Explore your options for pension transfers, reviews, early retirement and more." />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}
