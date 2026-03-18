@@ -244,7 +244,7 @@ const ContactUs = () => {
                 {formStep === 1 && (
                   <div className="flex flex-col items-center mb-4 bg-card rounded-t-2xl p-6 border border-b-0 border-border shadow-lg">
                     <img src={logo} alt="Pension Advice" className="h-12 w-auto mb-2" />
-                    <h2 className="text-2xl font-bold text-primary">Start your Pension Journey</h2>
+                    <h2 className="text-xl md:text-2xl font-bold text-primary whitespace-nowrap">Start your Pension Journey</h2>
                   </div>
                 )}
                 

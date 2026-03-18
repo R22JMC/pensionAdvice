@@ -12,16 +12,16 @@ import zurichLogo from "@/assets/partners/zurich.jpg";
 import standardLifeLogo from "@/assets/partners/standard-life.jpg";
 import royalLondonLogo from "@/assets/partners/royal-london.jpg";
 import pensionPropertyLogo from "@/assets/partners/pension-property.jpg";
-const partnerLogos = [
+const partnerLogos = [  
+  { src: avivaLogo, alt: "Aviva" },
+  { src: bcpLogo, alt: "BCP" },
+  { src: cantorFitzgeraldLogo, alt: "Cantor Fitzgerald" },
+  { src: coneximLogo, alt: "Conexim" },
   { src: irishLifeLogo, alt: "Irish Life" },
   { src: newIrelandLogo, alt: "New Ireland Assurance" },
   { src: zurichLogo, alt: "Zurich" },   
   { src: standardLifeLogo, alt: "Standard Life" },
   { src: royalLondonLogo, alt: "Royal London" }, 
-  { src: avivaLogo, alt: "Aviva" },
-  { src: bcpLogo, alt: "BCP" },
-  { src: cantorFitzgeraldLogo, alt: "Cantor Fitzgerald" },
-  { src: coneximLogo, alt: "Conexim" },
   { src: davyLogo, alt: "Davy" },
   { src: pensionPropertyLogo, alt: "Pension Property" },
 ];
@@ -147,13 +147,13 @@ const HeroSection = () => {
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/[0.02] to-transparent bg-white" />
         <div className="relative">
           <p className="text-center text-sm text-muted-foreground mb-6 font-medium">
-            Trusted by Ireland's leading pension providers..
+            Trusted by Ireland's leading pension providers
           </p>
           {/* Gradient masks for smooth edges */}
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
           
-          <div className="flex animate-scroll-x w-max ">
+          <div className="flex animate-scroll-x w-max justify-center">
             <div className="flex items-center gap-12 md:gap-16 px-8 shrink-0">
               {partnerLogos.map((logo, index) => (
                 <div key={index} className="flex-shrink-0 w-[120px] md:w-[160px] flex items-center justify-center">

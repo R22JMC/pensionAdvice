@@ -54,7 +54,7 @@ const Footer = () => {
   }];
   return <footer className="bg-card border-t border-border">
       <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6">
           {/* Logo & Info */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Link to="/" className="inline-block mb-4">
@@ -69,7 +69,7 @@ const Footer = () => {
           </div>
 
           {/* Learn More */}
-          <div>
+          <div className="col-span-2 md:col-span-1 lg:col-span-1">
             <h4 className="font-semibold text-foreground mb-4">Learn More</h4>
             <ul className="space-y-2">
               {learnMore.map(link => <li key={link.name}>
@@ -78,16 +78,6 @@ const Footer = () => {
                   </Link>
                 </li>)}
             </ul>
-             <div class="block md:hidden mt-4">
-              <h4 className="font-semibold text-foreground mb-4">About</h4>
-              <ul className="space-y-2">
-                {about.map(link => <li key={link.name}>
-                    <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors no-underline">
-                      {link.name}
-                    </Link>
-                  </li>)}
-              </ul>
-            </div>
           </div>
 
           {/* Calculators */}
@@ -99,10 +89,10 @@ const Footer = () => {
                     {link.name}
                   </Link>
                 </li>)}
-            </ul>            
+            </ul>
           </div>
 
-          <div class="hidden md:block">
+          <div>
             <h4 className="font-semibold text-foreground mb-4">About</h4>
             <ul className="space-y-2">
               {about.map(link => <li key={link.name}>
@@ -134,7 +124,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Us */}
-          <div>
+          <div className="col-span-2 md:col-span-1 lg:col-span-1">
             <h4 className="font-semibold text-foreground mb-4">Contact Us</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
