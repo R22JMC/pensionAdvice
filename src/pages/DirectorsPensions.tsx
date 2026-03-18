@@ -133,7 +133,7 @@ const DirectorsPensions = () => {
       <Helmet>
         <title>Pensions for Directors & the Self-Employed | Tax-Smart Advice</title>
         <meta name="description" content="We help directors and self-employed professionals set up tax-efficient pensions. Get expert advice on PRSAs, EPPs, and personal retirement plans." />
-        <link rel="canonical" href="https://www.pensionadvice.ie/categories/pensions-for-directors-and-self-employed" />
+        <link rel="canonical" href="https://www.pensionadvice.ie/services/directors-pensions" />
       </Helmet>
       
       <Header />
