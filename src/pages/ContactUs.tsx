@@ -135,6 +135,8 @@ const ContactUs = () => {
         additionalInfo: formData.additionalInfo,
         bestTimeToCall: formData.bestTimeToCall,
       },
+      // Avoid sending the confirmation email twice (step 1 already triggers it)
+      skipEmail: true,
     });
 
     console.log("Contact form submitted:", formData);
@@ -202,7 +204,7 @@ const ContactUs = () => {
             {/* Left Column - Contact Info & Reviews */}
             <div className="lg:col-span-3">
               <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">
-                Contact Pension Advice..
+                Contact Pension Advice...
               </h2>
               <p className="text-muted-foreground text-lg mb-10">
                 Contact us today to speak with one of our highly qualified pension experts.

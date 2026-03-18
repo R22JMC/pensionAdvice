@@ -191,6 +191,8 @@ const ServicePageHero = ({ title, subtitle, highlights = ["Expert Guidance", "In
         additionalInfo: formData.additionalInfo,
         bestTimeToCall: formData.bestTimeToCall,
       },
+      // Avoid sending the confirmation email twice (step 1 already triggers it)
+      skipEmail: true,
     });
 
     setIsSubmitting(false);
