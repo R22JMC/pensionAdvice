@@ -163,7 +163,7 @@ const Footer = () => {
         <div className="container-custom py-6 px-4">
           <div className="text-center text-xs text-muted-foreground space-y-2">
             <p>
-              Pension Advice is a trading name of Gen Z Financial Solutions Limited and is regulated by the Central Bank of Ireland C143985.
+              Gen Z Financial Solutions Limited trading as Pension Advice, Zed Insurance is regulated by the Central Bank of Ireland C143985.
             </p>
             <p>
               Directors: Chris McKenzie and Chris Crowley. Registered in Ireland under company number 565470.
