@@ -18,7 +18,7 @@ export const sharedConstants = {
 export const pensionTransferConfig = {
   title: "Pension Transfer or Consolidation",
   description: "See the benefits of consolidating your pensions",
-  buttonText: "Calculate Savings",
+  buttonText: "Calculate Projection",
   disclaimer: "Projections are estimates. Past performance is not a reliable guide to future performance.",
   infoMessage: "Some pensions may have valuable benefits worth retaining. Our specialists will analyse each pension to ensure consolidation is right for you.",
   
@@ -55,9 +55,9 @@ export const pensionTransferConfig = {
         { value: "1.75", label: "Higher than 1.5%" },
       ],
     },
-    retirementAge: {
-      label: "Your Current Age",
-      placeholder: "e.g., 45",
+    yearsToRetirement: {
+      label: "Years to Retirement",
+      placeholder: "e.g., 20",
     },
     riskLevel: {
       label: "Risk Level",
@@ -74,7 +74,7 @@ export const pensionTransferConfig = {
   results: {
     keepSeparateLabel: "Keep Separate",
     consolidatedLabel: "Consolidated",
-    savingsLabel: "Potential Extra Savings",
+    projectedFinalFundLabel: "Projected Final Fund Value",
     annualFeeLabel: "Annual Fee Saving",
   },
 };
