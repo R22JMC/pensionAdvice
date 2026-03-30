@@ -156,7 +156,7 @@ const UKPensionTransfers = () => {
 
       <div className="text-center py-4 bg-accent/5">
         <p className="text-muted-foreground">Living in Ireland with a UK pension? We'll help you decide whether transferring makes sense for your goals.</p>
-        <p className="text-foreground font-medium mt-2">Not sure if you're ready to transfer your UK pension to Ireland? Start with a free consultation.</p>
+        <p className="text-foreground font-medium mt-2">Not sure if you're ready to transfer your UK pension to Ireland? Start with a no obligation consultation.</p>
       </div>
 
       <ServiceContentSection blocks={contentBlocks} />
@@ -171,7 +171,7 @@ const UKPensionTransfers = () => {
       <section className="section-padding bg-gradient-to-b from-background to-secondary/30">
         <div className="container-custom">
           <div className="text-center max-w-2xl mx-auto mb-8">
-            <span className="inline-block text-accent font-semibold text-sm mb-2 tracking-wider uppercase">Free Tool</span>
+            {/* <span className="inline-block text-accent font-semibold text-sm mb-2 tracking-wider uppercase">Pension Tools</span> */}
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">UK Pension Transfer Calculator</h2>
             <p className="text-muted-foreground">Understand your UK pension value and currency risk</p>
           </div>

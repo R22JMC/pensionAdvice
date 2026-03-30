@@ -154,7 +154,7 @@ const AboutUs = () => {
               <div className="mt-5 p-4 bg-section-light rounded-xl border-l-4 border-accent relative">
                 <Quote className="absolute top-3 right-3 w-6 h-6 text-accent/20" />
                 <p className="text-foreground italic text-sm mb-2">
-                  "Our goal is simple: help you understand your pension options so you can make the best decisions for your future."
+                  "Our goal is simple: help you understand your pension options so you can make the so you can make an informed decision for your future."
                 </p>
                 <p className="text-accent font-semibold text-sm">— Chris McKenzie, Director</p>
               </div>
@@ -470,7 +470,7 @@ const AboutUs = () => {
               Ready to Get Started?
             </h2>
             <p className="opacity-90 mb-5 max-w-lg mx-auto">
-              Book a free consultation with our expert team today.
+              Book a consultation with our expert team today.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link to="/contact">
@@ -490,13 +490,13 @@ const AboutUs = () => {
       </section>
 
       {/* Regulatory Info */}
-      <section className="py-4 bg-muted/50 border-t border-border">
+      {/* <section className="py-4 bg-muted/50 border-t border-border">
         <div className="container-custom text-center">
           <p className="text-xs text-muted-foreground">
             Pension Advice is regulated by the Central Bank of Ireland. Registered in Ireland under company number 565470.
           </p>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

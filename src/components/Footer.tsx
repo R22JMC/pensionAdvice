@@ -168,9 +168,12 @@ const Footer = () => {
             <p>
               Directors: Chris McKenzie and Chris Crowley. Registered in Ireland under company number 565470.
             </p>
+            
             <p>
               Registered Office: Suite 2, Block 8, Dunshaughlin Business Park, Dunshaughlin, A85 EE98.
             </p>
+            <p>All information correct as at 01/03/2026</p>
+            <p>All information/calculators and tools contained in this website are for illustration purposes only.</p>
             <p className="pt-2">
               © 2025 Gen Z Financial Solutions Limited. All Rights Reserved. Web Design by <a href="https://rooftoptwentytwo.ie/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Rooftop Twenty Two</a>.
             </p>
