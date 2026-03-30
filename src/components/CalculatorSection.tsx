@@ -70,9 +70,9 @@ const CalculatorSection = () => {
       <div className="container-custom">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
-          {/* <span className="inline-block text-accent font-semibold text-sm mb-3 tracking-wider uppercase">
+          <span className="inline-block text-accent font-semibold text-sm mb-3 tracking-wider uppercase">
             Pension Tools
-          </span> */}
+          </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Pension Calculators
           </h2>
