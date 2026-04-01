@@ -157,7 +157,7 @@ const AboutUs = () => {
               <div className="mt-5 p-4 bg-section-light rounded-xl border-l-4 border-accent relative">
                 <Quote className="absolute top-3 right-3 w-6 h-6 text-accent/20" />
                 <p className="text-foreground italic text-sm mb-2">
-                  "Our goal is simple: help you understand your pension options so you can make the best decisions for your future."
+                  "Our goal is simple: help you understand your pension options so you can make the so you can make an informed decision for your future."
                 </p>
                 <p className="text-accent font-semibold text-sm">— Chris McKenzie, Director</p>
               </div>
@@ -172,7 +172,12 @@ const AboutUs = () => {
                   className="rounded-2xl shadow-xl w-full h-64 md:h-72 object-cover"
                 />
                 {/* Floating Card */}
-                <div className="absolute -bottom-4 left-0 sm:-left-4 bg-card p-3 rounded-lg shadow-lg border border-border">
+                <a
+                  href="https://registers.centralbank.ie/FirmRegisterDataPage.aspx?firmReferenceNumber=C143985&register=7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute -bottom-4 left-0 sm:-left-4 bg-card p-3 rounded-lg shadow-lg border border-border hover:shadow-xl hover:border-accent/30 transition-all"
+                >
                   <div className="flex items-center gap-2">
                     <div className="w-10 h-10 bg-accent/10 rounded-full flex items-center justify-center">
                       <Award className="w-5 h-5 text-accent" />
@@ -182,7 +187,7 @@ const AboutUs = () => {
                       <p className="text-xs text-muted-foreground">Regulated</p>
                     </div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -468,7 +473,7 @@ const AboutUs = () => {
               Ready to Get Started?
             </h2>
             <p className="opacity-90 mb-5 max-w-lg mx-auto">
-              Book a free consultation with our expert team today.
+              Book a consultation with our expert team today.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
               <Link to="/contact">
@@ -488,13 +493,13 @@ const AboutUs = () => {
       </section>
 
       {/* Regulatory Info */}
-      <section className="py-4 bg-muted/50 border-t border-border">
+      {/* <section className="py-4 bg-muted/50 border-t border-border">
         <div className="container-custom text-center">
           <p className="text-xs text-muted-foreground">
             Pension Advice is regulated by the Central Bank of Ireland. Registered in Ireland under company number 565470.
           </p>
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

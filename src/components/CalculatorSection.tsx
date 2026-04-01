@@ -71,13 +71,13 @@ const CalculatorSection = () => {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-10">
           <span className="inline-block text-accent font-semibold text-sm mb-3 tracking-wider uppercase">
-            Free Pension Tools
+            Pension Tools
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
             Pension Calculators
           </h2>
           <p className="text-lg text-muted-foreground">
-            Use our free calculators to explore your pension options. Get instant estimates and speak with our team about your personalised results.
+            Use our calculators to explore your pension options. Get instant estimates and speak with our team about your personalised results.
           </p>
         </div>
 

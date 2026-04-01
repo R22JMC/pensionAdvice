@@ -7,6 +7,7 @@ interface LeadData {
   formType: string;
   pageSource?: string;
   formData?: Record<string, unknown>;
+  skipEmail?: boolean;
 }
 
 // Capture GCLID from URL on page load
@@ -125,14 +126,18 @@ export async function submitLead(data: LeadData): Promise<{ success: boolean; er
 
     // Forward to Monday.com and send confirmation email (fire-and-forget)
     forwardToMonday(data);
-    sendConfirmationEmail(data);
+    if (!data.skipEmail) {
+      sendConfirmationEmail(data);
+    }
 
     return { success: true };
   } catch (err) {
     console.error('Unexpected error submitting lead:', err);
     // Still forward to Monday.com and send email even if DB fails
     forwardToMonday(data);
-    sendConfirmationEmail(data);
+    if (!data.skipEmail) {
+      sendConfirmationEmail(data);
+    }
     return { success: true };
   }
 }

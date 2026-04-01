@@ -9,13 +9,11 @@ import CalculatorLeadForm from "./CalculatorLeadForm";
 import { pensionTransferConfig as config, sharedConstants } from "@/data/calculatorConfig";
 import logo from "@/assets/logo.png";
 
-const RETIREMENT_AGE = 66; // Assumed retirement age
-
 const PensionTransferCalculator = () => {
   const [numberOfPensions, setNumberOfPensions] = useState("");
   const [totalValue, setTotalValue] = useState<number>(100000);
   const [averageFees, setAverageFees] = useState(config.inputs.averageFees.defaultValue);
-  const [currentAge, setCurrentAge] = useState("");
+  const [yearsToRetirement, setYearsToRetirement] = useState("");
   const [riskLevel, setRiskLevel] = useState(config.inputs.riskLevel.defaultValue);
   const [showResults, setShowResults] = useState(false);
   const [results, setResults] = useState<{
@@ -35,8 +33,7 @@ const PensionTransferCalculator = () => {
     const pensions = parseInt(numberOfPensions) || 1;
     const value = totalValue || 0;
     const fees = parseFloat(averageFees) || 1.25;
-    const age = parseInt(currentAge) || 45;
-    const years = Math.max(0, RETIREMENT_AGE - age);
+    const years = Math.max(0, parseInt(yearsToRetirement) || 0);
     
     const grossGrowthRate = getRiskGrowthRate(riskLevel);
     const { consolidatedFeeRate, adminFeePerPension } = config.constants;
@@ -162,22 +159,22 @@ const PensionTransferCalculator = () => {
             </div>
 
             <div>
-              <Label htmlFor="currentAge" className="text-sm font-medium text-foreground">
-                {config.inputs.retirementAge.label}
+              <Label htmlFor="yearsToRetirement" className="text-sm font-medium text-foreground">
+                {config.inputs.yearsToRetirement.label}
               </Label>
               <Input
-                id="currentAge"
+                id="yearsToRetirement"
                 type="text"
                 inputMode="numeric"
                 pattern="[0-9]*"
-                placeholder={config.inputs.retirementAge.placeholder}
-                value={currentAge}
-                onChange={(e) => setCurrentAge(e.target.value.replace(/[^0-9]/g, ''))}
+                placeholder={config.inputs.yearsToRetirement.placeholder}
+                value={yearsToRetirement}
+                onChange={(e) => setYearsToRetirement(e.target.value.replace(/[^0-9]/g, ''))}
                 className="mt-1"
               />
-              {currentAge && (
+              {yearsToRetirement && (
                 <p className="text-xs text-muted-foreground mt-1">
-                  {Math.max(0, RETIREMENT_AGE - parseInt(currentAge))} years until retirement (age {RETIREMENT_AGE})
+                  Projection period: {parseInt(yearsToRetirement) || 0} year{(parseInt(yearsToRetirement) || 0) === 1 ? "" : "s"}
                 </p>
               )}
             </div>
@@ -201,7 +198,7 @@ const PensionTransferCalculator = () => {
             <Button 
               onClick={calculateTransfer} 
               className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
-              disabled={!numberOfPensions || !totalValue || !currentAge}
+              disabled={!numberOfPensions || !totalValue || !yearsToRetirement}
             >
               {config.buttonText}
             </Button>
@@ -237,11 +234,11 @@ const PensionTransferCalculator = () => {
             <div className="bg-gradient-to-r from-accent/10 to-accent/5 rounded-lg p-4 border border-accent/20">
               <div className="flex items-center gap-2 mb-2">
                 <TrendingUp className="w-5 h-5 text-accent" />
-                <span className="font-semibold text-foreground">{config.results.savingsLabel}</span>
+                <span className="font-semibold text-foreground">{config.results.projectedFinalFundLabel}</span>
               </div>
-              <p className="text-2xl font-bold text-accent">{formatCurrency(results?.potentialSavings || 0)}</p>
+              <p className="text-2xl font-bold text-accent">{formatCurrency(results?.consolidatedProjection || 0)}</p>
               <p className="text-xs text-muted-foreground mt-1">
-                Over {results?.yearsToRetirement} years by consolidating {numberOfPensions} pension{parseInt(numberOfPensions) > 1 ? 's' : ''}
+                Based on {numberOfPensions} pension{parseInt(numberOfPensions) > 1 ? 's' : ''}, current value, AMC, risk level and a {results?.yearsToRetirement}-year projection period
               </p>
             </div>
 
@@ -265,12 +262,12 @@ const PensionTransferCalculator = () => {
               <div className="p-6">
                 <div className="flex flex-col items-center mb-4">
                   <img src={logo} alt="Pension Advice" className="h-12 w-auto mb-2" />
-                  <h3 className="text-xl font-bold text-primary">Start your Pension Journey</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-primary whitespace-nowrap">Start your Pension Journey</h3>
                 </div>
                 
                 <CalculatorLeadForm 
                   calculatorType="Pension Transfer/Consolidation"
-                  resultSummary={`${formatCurrency(results?.potentialSavings || 0)} potential savings from consolidating ${numberOfPensions} pension(s)`}
+                  resultSummary={`${formatCurrency(results?.consolidatedProjection || 0)} projected final fund value over ${results?.yearsToRetirement || 0} years`}
                   hideHeader={true}
                 />
               </div>

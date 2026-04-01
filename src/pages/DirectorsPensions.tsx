@@ -10,6 +10,8 @@ import ServiceCTA from "@/components/ServiceCTA";
 import ServiceFAQ from "@/components/ServiceFAQ";
 import AdvisorContactCard from "@/components/AdvisorContactCard";
 import CorePriorities from "@/components/CorePriorities";
+import ServiceVideos from "@/components/ServiceVideos";
+import ServiceReviews from "@/components/ServiceReviews";
 import { Phone, FileText, Calculator, Settings } from "lucide-react";
 import DirectorsPensionCalculator from "@/components/calculators/DirectorsPensionCalculator";
 
@@ -150,16 +152,22 @@ const DirectorsPensions = () => {
 
       <div className="text-center py-4 bg-accent/5">
         <p className="text-muted-foreground">We also support business owners who already have pensions in place but want to optimise for charges, fund choice, or drawdown flexibility.</p>
-        <p className="text-foreground font-medium mt-2">Not sure which option fits you? Start with a free consultation.</p>
+        <p className="text-foreground font-medium mt-2">Not sure which option fits you? Start with a no obligation consultation.</p>
       </div>
 
       <ServiceContentSection blocks={contentBlocks} />
+
+      <ServiceVideos
+        category="directors"
+        title="Watch: Pension Reviews for Directors"
+        subtitle="Learn why reviewing your pension matters as a director or self-employed professional."
+      />
 
       {/* Calculator Section */}
       <section className="section-padding bg-gradient-to-b from-background to-secondary/30">
         <div className="container-custom">
           <div className="text-center max-w-2xl mx-auto mb-8">
-            <span className="inline-block text-accent font-semibold text-sm mb-2 tracking-wider uppercase">Free Tool</span>
+            {/* <span className="inline-block text-accent font-semibold text-sm mb-2 tracking-wider uppercase">Pension Tools</span> */}
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Director's Pension Calculator</h2>
             <p className="text-muted-foreground">Calculate your maximum tax-efficient contributions</p>
           </div>
@@ -195,6 +203,8 @@ const DirectorsPensions = () => {
         title="Frequently Asked Questions About Pensions for Directors and the Self-Employed"
         faqs={faqs}
       />
+
+      <ServiceReviews category="directors" />
 
       <AdvisorContactCard />
 

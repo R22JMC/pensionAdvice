@@ -11,14 +11,14 @@ export const videos = [
     title: "ARF Investment Strategies Explained",
     description: "Understanding Approved Retirement Fund investment strategies for your retirement.",
     category: "retirement",
-    thumbIndex: 3,
+    customThumb: "hqdefault",
   },
   {
     id: "oq2bFvkpvy4",
     title: "Why Reviewing Your Pension Matters",
     description: "Discover the importance of regular pension reviews to maximise your retirement income.",
     category: "reviews",
-    thumbIndex: 2,
+    customThumb: "hqdefault",
   },
   {
     id: "q24q8UqpaFQ",
@@ -32,22 +32,21 @@ export const videos = [
     title: "UK to Ireland Pension Transfers: What to Know",
     description: "Essential information about transferring your UK pension to Ireland.",
     category: "ukTransfer",
-    thumbIndex: 3,
-    customThumb: "hq3",
+    customThumb: "hqdefault",
   },
   {
     id: "It0HOVq-hs8",
     title: "Your Guide to UK Pension Transfers",
     description: "A comprehensive guide to the UK pension transfer process.",
     category: "ukTransfer",
-    thumbIndex: 2,
+    customThumb: "hqdefault",
   },
   {
     id: "2t-vCK2zJ-4",
     title: "Portfolio Construction and Risk Explained",
     description: "Understanding how pension portfolios are constructed and risk is managed.",
     category: "general",
-    thumbIndex: 1,
+    customThumb: "hqdefault",
   },
   {
     id: "4uZile1091I",
@@ -61,7 +60,14 @@ export const videos = [
     title: "Technology-Led Cashflow Planning",
     description: "How technology helps plan your retirement cashflow for the future.",
     category: "general",
-    thumbIndex: 2,
+    customThumb: "hqdefault",
+  },
+  {
+    id: "oq2bFvkpvy4",
+    title: "Why a Pension Review Matters for Directors",
+    description: "Chris McKenzie explains the importance of reviewing your pension as a director or self-employed professional.",
+    category: "directors",
+    customThumb: "hqdefault",
   },
 ];
 

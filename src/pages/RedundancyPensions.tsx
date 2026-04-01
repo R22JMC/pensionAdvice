@@ -10,6 +10,7 @@ import ServiceCTA from "@/components/ServiceCTA";
 import ServiceFAQ from "@/components/ServiceFAQ";
 import AdvisorContactCard from "@/components/AdvisorContactCard";
 import CorePriorities from "@/components/CorePriorities";
+import ServiceReviews from "@/components/ServiceReviews";
 import { Phone, FileSearch, FileText, CheckCircle } from "lucide-react";
 import RedundancyCalculator from "@/components/calculators/RedundancyCalculator";
 
@@ -34,7 +35,7 @@ const RedundancyPensions = () => {
         "Move it into a Buy Out Bond (also known as a Personal Retirement Bond)",
         "Transfer it to a PRSA (subject to restrictions, especially for DB members)",
       ],
-      note: "Each option has pros and cons, depending on your goals. We'll walk you through them clearly so you can make the best decision for your future.",
+      note: "Each option has pros and cons, depending on your goals. We'll walk you through them clearly so you can make the so you can make an informed decision for your future.",
     },
   ];
 
@@ -106,7 +107,7 @@ const RedundancyPensions = () => {
       answer: "You may receive a reduced transfer value, and early access could be restricted. It's critical to understand the implications before acting.",
     },
     {
-      question: "How do I know which option is best for me?",
+      question: "How do you know which option suits my need?",
       answer: "We offer personalised advice based on your employment history, pension type, age, and retirement goals. Our aim is to help you make a confident, informed decision.",
     },
   ];
@@ -135,7 +136,7 @@ const RedundancyPensions = () => {
 
       <div className="text-center py-4 bg-accent/5">
         <p className="text-muted-foreground">Made redundant recently or reviewing your pension options after a career change? We'll help you take control of your retirement savings and avoid costly mistakes.</p>
-        <p className="text-foreground font-medium mt-2">Not sure what to do if you've been made redundant? Start with a free consultation.</p>
+        <p className="text-foreground font-medium mt-2">Not sure what to do if you've been made redundant? Start with a no obligation consultation.</p>
       </div>
 
       <ServiceContentSection blocks={contentBlocks} />
@@ -144,7 +145,7 @@ const RedundancyPensions = () => {
       <section className="section-padding bg-gradient-to-b from-background to-secondary/30">
         <div className="container-custom">
           <div className="text-center max-w-2xl mx-auto mb-8">
-            <span className="inline-block text-accent font-semibold text-sm mb-2 tracking-wider uppercase">Free Tool</span>
+            {/* <span className="inline-block text-accent font-semibold text-sm mb-2 tracking-wider uppercase">Pension Tools</span> */}
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Redundancy & Pension Calculator</h2>
             <p className="text-muted-foreground">Estimate your redundancy entitlements and pension options</p>
           </div>
@@ -180,6 +181,8 @@ const RedundancyPensions = () => {
         title="Frequently Asked Questions About Redundancy and Pensions"
         faqs={faqs}
       />
+
+      <ServiceReviews category="redundancy" />
 
       <AdvisorContactCard />
 

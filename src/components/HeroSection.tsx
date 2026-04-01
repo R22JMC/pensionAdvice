@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero/happy-pensioners.jpg";
 import avivaLogo from "@/assets/partners/aviva.jpg";
@@ -12,21 +12,88 @@ import zurichLogo from "@/assets/partners/zurich.jpg";
 import standardLifeLogo from "@/assets/partners/standard-life.jpg";
 import royalLondonLogo from "@/assets/partners/royal-london.jpg";
 import pensionPropertyLogo from "@/assets/partners/pension-property.jpg";
-const partnerLogos = [
-  { src: avivaLogo, alt: "Aviva" },
-  { src: bcpLogo, alt: "BCP" },
-  { src: cantorFitzgeraldLogo, alt: "Cantor Fitzgerald" },
-  { src: coneximLogo, alt: "Conexim" },
-  { src: davyLogo, alt: "Davy" },
-  { src: irishLifeLogo, alt: "Irish Life" },
-  { src: newIrelandLogo, alt: "New Ireland Assurance" },
-  { src: zurichLogo, alt: "Zurich" },
-  { src: standardLifeLogo, alt: "Standard Life" },
-  { src: royalLondonLogo, alt: "Royal London" },
-  { src: pensionPropertyLogo, alt: "Pension Property" },
-];
 
 const HeroSection = () => {
+  const partnerLogosDesktop = useMemo(
+    () => [      
+      { src: bcpLogo, alt: "BCP" },
+      { src: cantorFitzgeraldLogo, alt: "Cantor Fitzgerald" },
+      { src: coneximLogo, alt: "Conexim" },
+      { src: zurichLogo, alt: "Zurich" },
+      { src: newIrelandLogo, alt: "New Ireland Assurance" },
+      { src: royalLondonLogo, alt: "Royal London" },
+      { src: standardLifeLogo, alt: "Standard Life" },
+      { src: irishLifeLogo, alt: "Irish Life" },     
+      { src: avivaLogo, alt: "Aviva" },     
+      
+      { src: davyLogo, alt: "Davy" },
+      { src: pensionPropertyLogo, alt: "Pension Property" },
+    ],
+    [],
+  );
+
+  // Mobile reorder so the "main" providers appear first under 767px.
+  const partnerLogosMobile = useMemo(
+    () => [
+      { src: zurichLogo, alt: "Zurich" },
+      { src: newIrelandLogo, alt: "New Ireland Assurance" },
+      { src: royalLondonLogo, alt: "Royal London" },
+      { src: standardLifeLogo, alt: "Standard Life" },
+      { src: irishLifeLogo, alt: "Irish Life" },
+      { src: avivaLogo, alt: "Aviva" },
+      // The remaining providers
+      { src: bcpLogo, alt: "BCP" },
+      { src: cantorFitzgeraldLogo, alt: "Cantor Fitzgerald" },
+      { src: coneximLogo, alt: "Conexim" },
+      { src: davyLogo, alt: "Davy" },
+      { src: pensionPropertyLogo, alt: "Pension Property" },
+    ],
+    [],
+  );
+
+  const [isMobile, setIsMobile] = useState(false);
+  const [logosInView, setLogosInView] = useState(false);
+  const logosSectionRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    const mql = window.matchMedia("(max-width: 767px)");
+    const onChange = () => setIsMobile(mql.matches);
+    onChange();
+
+    // Safari < 14 fallback
+    if (typeof mql.addEventListener === "function") {
+      mql.addEventListener("change", onChange);
+      return () => mql.removeEventListener("change", onChange);
+    }
+
+    // eslint-disable-next-line deprecation/deprecation
+    mql.addListener(onChange);
+    // eslint-disable-next-line deprecation/deprecation
+    return () => mql.removeListener(onChange);
+  }, []);
+
+  useEffect(() => {
+    if (!logosSectionRef.current) return;
+    if (logosInView) return; // start once
+
+    const el = logosSectionRef.current;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const entry = entries[0];
+        if (entry?.isIntersecting) {
+          setLogosInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.25 },
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [logosInView]);
+
+  const partnerLogos = isMobile ? partnerLogosMobile : partnerLogosDesktop;
+
   // Load Reviews.io widget script
   useEffect(() => {
     const script = document.createElement('script');
@@ -145,15 +212,15 @@ const HeroSection = () => {
       {/* Partner Logos Scroller */}
       <div className="bg-white py-10 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-accent/[0.02] to-transparent bg-white" />
-        <div className="relative">
+        <div className="relative" ref={logosSectionRef}>
           <p className="text-center text-sm text-muted-foreground mb-6 font-medium">
-            Trusted by Ireland's leading pension providers
+            We hold agencies with Ireland's leading pension providers
           </p>
           {/* Gradient masks for smooth edges */}
           <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
           <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
           
-          <div className="flex animate-scroll-x w-max">
+          <div className={`flex w-max justify-center ${logosInView ? "animate-scroll-x" : ""}`}>
             <div className="flex items-center gap-12 md:gap-16 px-8 shrink-0">
               {partnerLogos.map((logo, index) => (
                 <div key={index} className="flex-shrink-0 w-[120px] md:w-[160px] flex items-center justify-center">

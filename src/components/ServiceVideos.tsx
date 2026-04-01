@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Play, X, Video } from "lucide-react";
 import { videos, Video as VideoType } from "@/data/resourcesData";
+import logo from "@/assets/logo.png";
 import {
   Dialog,
   DialogContent,
@@ -59,6 +60,12 @@ const ServiceVideos = ({
                   (e.target as HTMLImageElement).src = `https://img.youtube.com/vi/${primaryVideo.id}/hqdefault.jpg`;
                 }}
               />
+              {/* Logo overlay for branded thumbnail */}
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <div className="bg-white/90 backdrop-blur-sm rounded-xl px-4 py-2 shadow-lg md:hidden">
+                  <img src={logo} alt="Pension Advice" className="h-8 w-auto" />
+                </div>
+              </div>
               <div className="absolute bottom-3 left-3">
                 <div className="w-10 h-10 rounded-full bg-accent flex items-center justify-center group-hover:bg-accent/80 transition-colors shadow-lg">
                   <Play className="w-4 h-4 text-accent-foreground fill-current ml-0.5" />

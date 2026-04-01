@@ -95,6 +95,8 @@ const DirectorsPensionCalculator = () => {
         additionalInfo: formData.additionalNotes,
         bestTimeToCall: formData.bestTimeToCall,
       },
+      // Avoid sending the confirmation email twice (step 1 already triggers it)
+      skipEmail: true,
     });
 
     console.log("Director's Pension Quote Request:", formData);

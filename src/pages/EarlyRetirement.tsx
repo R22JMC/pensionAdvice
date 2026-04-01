@@ -11,6 +11,7 @@ import ServiceFAQ from "@/components/ServiceFAQ";
 import AdvisorContactCard from "@/components/AdvisorContactCard";
 import CorePriorities from "@/components/CorePriorities";
 import ServiceVideos from "@/components/ServiceVideos";
+import ServiceReviews from "@/components/ServiceReviews";
 import { Phone, FileSearch, FileText, CheckCircle } from "lucide-react";
 import EarlyRetirementCalculator from "@/components/calculators/EarlyRetirementCalculator";
 
@@ -158,7 +159,7 @@ const EarlyRetirement = () => {
 
       <div className="text-center py-4 bg-accent/5">
         <p className="text-muted-foreground">If you're asking whether you can unlock your pension early, we'll help you understand your options and avoid costly mistakes.</p>
-        <p className="text-foreground font-medium mt-2">Not sure if it's time to unlock your pension? Start with a free consultation.</p>
+        <p className="text-foreground font-medium mt-2">Not sure if it's time to unlock your pension? Start with a no obligation consultation.</p>
       </div>
 
       <ServiceContentSection blocks={contentBlocks} />
@@ -173,7 +174,7 @@ const EarlyRetirement = () => {
       <section className="section-padding bg-gradient-to-b from-background to-secondary/30">
         <div className="container-custom">
           <div className="text-center max-w-2xl mx-auto mb-8">
-            <span className="inline-block text-accent font-semibold text-sm mb-2 tracking-wider uppercase">Free Tool</span>
+            {/* <span className="inline-block text-accent font-semibold text-sm mb-2 tracking-wider uppercase">Pension Tools</span> */}
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Early Retirement Calculator</h2>
             <p className="text-muted-foreground">Estimate your tax-free lump sum and retirement income</p>
           </div>
@@ -205,6 +206,8 @@ const EarlyRetirement = () => {
         title="Frequently Asked Questions About Getting Your Pension Early"
         faqs={faqs}
       />
+
+      <ServiceReviews category="earlyRetirement" />
 
       <AdvisorContactCard />
 

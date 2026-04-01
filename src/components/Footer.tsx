@@ -54,7 +54,7 @@ const Footer = () => {
   }];
   return <footer className="bg-card border-t border-border">
       <div className="container-custom section-padding">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 lg:gap-6">
           {/* Logo & Info */}
           <div className="col-span-2 md:col-span-3 lg:col-span-1">
             <Link to="/" className="inline-block mb-4">
@@ -69,7 +69,7 @@ const Footer = () => {
           </div>
 
           {/* Learn More */}
-          <div>
+          <div className="col-span-2 md:col-span-1 lg:col-span-1">
             <h4 className="font-semibold text-foreground mb-4">Learn More</h4>
             <ul className="space-y-2">
               {learnMore.map(link => <li key={link.name}>
@@ -82,7 +82,7 @@ const Footer = () => {
 
           {/* Calculators */}
           <div>
-            <h4 className="font-semibold text-foreground mb-4">Calculators</h4>
+            <h4 className="font-semibold text-foreground mb-4">Calculators.</h4>
             <ul className="space-y-2">
               {calculators.map(link => <li key={link.name}>
                   <Link to={link.href} className="text-sm text-muted-foreground hover:text-primary transition-colors no-underline">
@@ -124,7 +124,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Us */}
-          <div>
+          <div className="col-span-2 md:col-span-1 lg:col-span-1">
             <h4 className="font-semibold text-foreground mb-4">Contact Us</h4>
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -168,9 +168,12 @@ const Footer = () => {
             <p>
               Directors: Chris McKenzie and Chris Crowley. Registered in Ireland under company number 565470.
             </p>
+            
             <p>
               Registered Office: Suite 2, Block 8, Dunshaughlin Business Park, Dunshaughlin, A85 EE98.
             </p>
+            <p>All information correct as at 01/03/2026</p>
+            <p>All information/calculators and tools contained in this website are for illustration purposes only.</p>
             <p className="pt-2">
               © 2025 Gen Z Financial Solutions Limited. All Rights Reserved. Web Design by <a href="https://rooftoptwentytwo.ie/" target="_blank" rel="noopener noreferrer" className="text-accent hover:underline">Rooftop Twenty Two</a>.
             </p>

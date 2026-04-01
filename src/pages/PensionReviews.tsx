@@ -11,6 +11,7 @@ import ServiceFAQ from "@/components/ServiceFAQ";
 import AdvisorContactCard from "@/components/AdvisorContactCard";
 import CorePriorities from "@/components/CorePriorities";
 import ServiceVideos from "@/components/ServiceVideos";
+import ServiceReviews from "@/components/ServiceReviews";
 import PensionReviewCalculator from "@/components/calculators/PensionReviewCalculator";
 import { Phone, FileSearch, FileText, CheckCircle } from "lucide-react";
 
@@ -137,7 +138,7 @@ const PensionReviews = () => {
 
       <div className="text-center py-4 bg-accent/5">
         <p className="text-muted-foreground">If you're asking, "Is my pension actually doing what it should?" — this is for you.</p>
-        <p className="text-foreground font-medium mt-2">Not sure if you need a pension review yet? Start with a free consultation.</p>
+        <p className="text-foreground font-medium mt-2">Not sure if you need a pension review yet? Start with a no obligation consultation.</p>
       </div>
 
       <ServiceContentSection blocks={contentBlocks} />
@@ -152,7 +153,7 @@ const PensionReviews = () => {
       <section className="section-padding bg-gradient-to-b from-background to-secondary/30">
         <div className="container-custom">
           <div className="text-center max-w-2xl mx-auto mb-8">
-            <span className="inline-block text-accent font-semibold text-sm mb-2 tracking-wider uppercase">Free Tool</span>
+            {/* <span className="inline-block text-accent font-semibold text-sm mb-2 tracking-wider uppercase">Pension Tools</span> */}
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Pension Review Calculator</h2>
             <p className="text-muted-foreground">Review your pension's projected value at retirement</p>
           </div>
@@ -184,10 +185,12 @@ const PensionReviews = () => {
         phone="01 912 5030"
       />
 
-      <ServiceFAQ
+      {/* <ServiceFAQ
         title="Frequently Asked Questions About Pension Reviews"
         faqs={faqs}
-      />
+      /> */}
+
+      <ServiceReviews category="reviews" />
 
       <AdvisorContactCard />
 

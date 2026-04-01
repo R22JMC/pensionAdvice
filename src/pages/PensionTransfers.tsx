@@ -11,6 +11,7 @@ import ServiceCTA from "@/components/ServiceCTA";
 import ServiceFAQ from "@/components/ServiceFAQ";
 import AdvisorContactCard from "@/components/AdvisorContactCard";
 import CorePriorities from "@/components/CorePriorities";
+import ServiceReviews from "@/components/ServiceReviews";
 import PensionTransferCalculator from "@/components/calculators/PensionTransferCalculator";
 
 const whoShouldConsiderFeatures = [
@@ -70,8 +71,8 @@ const processSteps = [
   },
   {
     icon: CheckCircle,
-    title: "Step 3 – You Get a Free Transfer Report",
-    description: "Our advisors review transfer values and exit fees, any locked-in benefits (e.g. bonuses, annuity rates), tax-free cash implications, access age and retirement options, and fund performance and costs. You'll get a plain-English report outlining your options, free and with no obligation.",
+    title: "Step 3 – You Get a Detailed Transfer Report",
+    description: "Our advisors review transfer values and exit fees, any locked-in benefits (e.g. bonuses, annuity rates), tax-free cash implications, access age and retirement options, and fund performance and costs. You'll get a plain-English report outlining your options.",
   },
   {
     icon: ClipboardCheck,
@@ -191,7 +192,7 @@ const PensionTransfers = () => {
 
       <div className="text-center py-4 bg-accent/5">
         <p className="text-muted-foreground">We also help employers or HR professionals handling bulk pension transfers for teams.</p>
-        <p className="text-foreground font-medium mt-2">Not sure if you're ready to transfer or consolidate? Start with a free consultation.</p>
+        <p className="text-foreground font-medium mt-2">Not sure if you're ready to transfer or consolidate? Start with a no obligation consultation.</p>
       </div>
 
       <ServiceContentSection blocks={contentBlocks} />
@@ -200,7 +201,7 @@ const PensionTransfers = () => {
       <section className="section-padding bg-gradient-to-b from-background to-secondary/30">
         <div className="container-custom">
           <div className="text-center max-w-2xl mx-auto mb-8">
-            <span className="inline-block text-accent font-semibold text-sm mb-2 tracking-wider uppercase">Free Tool</span>
+            {/* <span className="inline-block text-accent font-semibold text-sm mb-2 tracking-wider uppercase">Pension Tools</span> */}
             <h2 className="text-2xl md:text-3xl font-bold text-foreground mb-3">Pension Consolidation Calculator</h2>
             <p className="text-muted-foreground">See the benefits of consolidating your pensions</p>
           </div>
@@ -236,6 +237,8 @@ const PensionTransfers = () => {
         title="Frequently Asked Questions about Pension Transfers in Ireland"
         faqs={faqs}
       />
+
+      <ServiceReviews category="transfers" />
 
       <AdvisorContactCard />
 

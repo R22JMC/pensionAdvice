@@ -191,6 +191,8 @@ const ServicePageHero = ({ title, subtitle, highlights = ["Expert Guidance", "In
         additionalInfo: formData.additionalInfo,
         bestTimeToCall: formData.bestTimeToCall,
       },
+      // Avoid sending the confirmation email twice (step 1 already triggers it)
+      skipEmail: true,
     });
 
     setIsSubmitting(false);
@@ -289,7 +291,7 @@ const ServicePageHero = ({ title, subtitle, highlights = ["Expert Guidance", "In
                   <div className="p-4 sm:p-6 md:p-8">
                     <div className="flex flex-col items-center mb-4">
                       <img src={logo} alt="Pension Advice" className="h-12 w-auto mb-2" />
-                      <h3 className="text-2xl font-bold text-primary">Start your Pension Journey</h3>
+                      <h3 className="text-xl md:text-2xl font-bold text-primary whitespace-nowrap">Start your Pension Journey</h3>
                     </div>
                     <p className="text-muted-foreground text-center text-sm mb-6">
                       {getFormDescription()}
