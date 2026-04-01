@@ -1,23 +1,5 @@
 {
   "cleanUrls": true,
-  "redirects": [
-    { "source": "/my-situation/self-employed", "destination": "/services/directors-pensions", "permanent": true },
-    { "source": "/my-situation/self-employed/", "destination": "/services/directors-pensions", "permanent": true },
-    { "source": "/categories/unlock-your-pension-early", "destination": "/services/early-retirement", "permanent": true },
-    { "source": "/categories/transferring-your-uk-pension-to-ireland", "destination": "/services/uk-pension-transfers", "permanent": true },
-    { "source": "/categories/review-your-pension", "destination": "/services/pension-reviews", "permanent": true },
-    { "source": "/categories/pensions-for-directors-and-self-employed", "destination": "/services/directors-pensions", "permanent": true },
-    { "source": "/categories/pensions-and-redundancy", "destination": "/services/redundancy-pensions", "permanent": true },
-    { "source": "/categories/pension-transfers", "destination": "/services/pension-transfers", "permanent": true },
-    { "source": "/categories/pension-transfers/", "destination": "/services/pension-transfers", "permanent": true },
-    { "source": "/categories/pension-transfers-and-consolidation", "destination": "/services/pension-transfers", "permanent": true },
-    { "source": "/about-us", "destination": "/about", "permanent": true },
-    { "source": "/about-us/", "destination": "/about", "permanent": true }
-  ]
-}
-
-{
-  "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
     { "source": "/my-situation/self-employed", "destination": "/services/directors-pensions", "permanent": true },
